@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: invoice-service
+  #zipkin:
+    #base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1
+server:
+  port: 8002
+eureka:
+  instance:
+    hostname: localhost
+    secure-port: ${server.port}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
