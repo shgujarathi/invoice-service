@@ -41,7 +41,7 @@ public class InvoiceController {
 	}
 
 	public void defaultInvoice(Invoice invoice) {
-		invoice.setMilestone(new Milestone(2L, "01/01/1111", "01/01/9999", 0L, 0L));
+		invoice.setMilestone(new Milestone(9999L, "01/01/2000", "01/01/9999", 10L, 100L));
 		invoiceRepo.saveInvoice(invoice);
 	}
 
